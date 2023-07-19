@@ -313,3 +313,14 @@ function getLetter(value){
   console.log(string[index-value])
   console.log(string[value+index+1])
 }
+
+let keyBy = (arr,key)=>arr.reduce((acc,el)=>{
+	acc[el[key]] = el;
+	return acc;
+},{});
+
+
+let arr = [{'id':'73','foo':'bar'},{'id':'45','foo':'bar'}];
+
+
+console.log( keyBy(arr,'id'));
